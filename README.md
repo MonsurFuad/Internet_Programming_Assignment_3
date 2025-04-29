@@ -1,7 +1,8 @@
-# Internet_Programming_Assignment_3
-# Simple PHP User Authentication System (Without Database)
+# PHP User Authentication System (Without Database)
 
-This is a basic **user login, registration, and password recovery system** built using **raw PHP and file handling**, without any database (like MySQL). It uses a simple text file (`users.txt`) to store user data.
+This is a basic **User Login, Registration, and Password Recovery system** built using **raw PHP** without a database. It uses simple file handling to store user credentials in `users.txt`.
+
+✅ This project was developed using **XAMPP** as the local server and successfully **deployed live on InfinityFree**.
 
 ---
 
@@ -10,63 +11,66 @@ This is a basic **user login, registration, and password recovery system** built
 - User Registration
 - User Login
 - Password Recovery
-- Session-based Login State
-- Uses `users.txt` for storage (no database)
+- Session-based login system
+- File-based storage (`users.txt`) instead of database
+
+---
+
+## 🧱 Technologies Used
+
+- PHP (Core scripting)
+- HTML (Basic forms)
+- File Handling for storing user data
+- XAMPP (Local development environment)
+- InfinityFree (Live deployment hosting)
 
 ---
 
 ## 📁 File Structure
 
 ```
-/simple-auth/
-├── users.txt              # Stores user data
-├── register.php           # Registration form
+/php-auth/
+├── users.txt              # Stores user data (username|email|password)
+├── register.php           # User registration form
 ├── login.php              # Login form
-├── recover.php            # Password recovery
-├── dashboard.php          # Protected user dashboard
-├── logout.php             # Logout and destroy session
+├── recover.php            # Password recovery page
+├── dashboard.php          # Protected dashboard
+├── logout.php             # Ends session
 ```
 
 ---
 
-## 🧑‍💻 Example User Data (`users.txt`)
+## 👤 Sample User Data (`users.txt`)
 
 ```
-john|john@example.com|12345
-alice|alice@example.com|alicepass
-bob|bob@example.com|bob123
-eva|eva@example.com|evapass
-mike|mike@example.com|mike2025
+fuad|fuad@gmail.com|12345
+razzak|razzak@gmail.com|bhondo
+jahid|jahid@gmail.com|jahiddss
+siyam|siyam@gmail.com|siyamsmall
+monsur|monsur@gmail.com|monsur2025
 ```
-
-Format:
-```
-username|email|password
-```
-
-> ⚠️ Passwords are stored as **plain text** for simplicity (not secure for production use).
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 How to Run Locally (Using XAMPP)
 
-1. Install **XAMPP**, **WAMP**, or any PHP server.
-2. Place the project folder inside the `htdocs` directory (for XAMPP).
-3. Start Apache server.
-4. Visit: [http://localhost/simple-auth/login.php](http://localhost/simple-auth/login.php)
-
----
-
-## 🌍 How to Deploy Live
-
-1. Use a hosting service (e.g., InfinityFree, Hostinger).
-2. Upload all files via **File Manager** or **FTP**.
-3. Make sure `users.txt` is writable.
-4. Access your domain: `https://yourdomain.com/login.php`
+1. Install [XAMPP](https://www.apachefriends.org/)
+2. Copy project folder into `htdocs/`
+3. Start Apache server from XAMPP Control Panel
+4. Visit in browser: [http://localhost/php-auth/login.php](http://localhost/php-auth/login.php)
 
 ---
 
-## 📦 Git Commands to Push to GitHub
+## 🌐 Live Deployment (InfinityFree)
+
+The project is deployed live at:
+
+👉 **[https://your-subdomain.infinityfreeapp.com](https://your-subdomain.infinityfreeapp.com)**  
+*(Replace with your actual subdomain)*
+
+---
+
+## 📦 Push to GitHub (Optional)
 
 ```bash
 git init
@@ -78,16 +82,16 @@ git push -u origin master
 
 ---
 
-## ❗ Security Notes
+## ❗ Security Notice
 
-- This project is for learning/demo only.
-- Do not use it in production.
-- No password hashing
-- No CSRF protection
-- No email verification
+This project is intended for **learning/demo purposes** only.
+
+- Passwords stored in plain text (⚠️ Insecure)
+- No CSRF, email validation, or hashing
+- Not production-ready
 
 ---
 
 ## 📚 License
 
-This project is open-source and free to use under the [MIT License](LICENSE).
+Free to use under the [MIT License](LICENSE).
